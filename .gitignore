@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+
+# Virtual environments and local tooling
+.venv/
+.venv-*/
+.cache/
+.coverage
+htmlcov/
+*.log
+
+# Secrets (only the sanitized example belongs in Git)
+.env
+.env.*
+!.env.example
+
+# Private source documents, uploads, databases and downloaded models
+/data/
+/models/
+/tests/test_pdf.md
+
+# Editor / operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
