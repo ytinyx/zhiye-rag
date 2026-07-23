@@ -1,10 +1,11 @@
 # 知页 RAG
 
-阶段版本：`july-v3`。
+阶段版本：`july-v4`。
 
 - 文档解析与清洗
 - 嵌入与文档入库
 - 检索与缓存
+- RAG API 与上传安全
 
 ## 环境与测试
 
@@ -12,7 +13,7 @@
 
 ## 使用
 
-此阶段提供 Python 库模块，可从 `src.parsers` 导入 `ParserFactory` 或 `parse_file` 解析本地文件。其他模块按上述功能范围提供。
+运行 `uv run --locked uvicorn src.api.main:app --port 8000`；访问 `http://localhost:8000/docs` 使用 API，`/api/health/` 检查状态。
 
 ## 本地数据与许可
 
