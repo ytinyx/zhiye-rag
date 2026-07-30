@@ -20,6 +20,16 @@ def client():
         yield test_client
 
 
+def test_home_and_assets_are_served(client):
+    response = client.get('/')
+    assert response.status_code == 200
+    assert '知页 RAG' in response.text
+    assert response.headers['content-type'].startswith('text/html')
+    for path in ('/js/app.js', '/js/api/base.js', '/css/custom.css'):
+        assert client.get(path).status_code == 200
+    # Serving the UI must not expose the project root or local secrets.
+    assert client.get('/.env').status_code == 404
+    assert client.get('/data/chroma_db/chroma.sqlite3').status_code == 404
 
 
 def test_health_and_supported_formats(client):

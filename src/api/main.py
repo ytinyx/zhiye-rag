@@ -5,8 +5,10 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 
-from src.api.config import settings
+from src.api.config import PROJECT_ROOT, settings
 
 from src.api.routers import document
 from src.api.routers import chat
@@ -30,6 +32,15 @@ if settings.CORS_ORIGINS:
 app.include_router(document.router,prefix='/api')
 app.include_router(chat.router,prefix='/api')
 app.include_router(health.router,prefix='/api')
+
+FRONTEND_DIR = PROJECT_ROOT / 'frontend'
+app.mount('/js', StaticFiles(directory=FRONTEND_DIR / 'js'), name='javascript')
+app.mount('/css', StaticFiles(directory=FRONTEND_DIR / 'css'), name='stylesheets')
+
+
+@app.get('/', include_in_schema=False)
+async def index():
+    return FileResponse(FRONTEND_DIR / 'index.html')
 
 if __name__ == '__main__':
     import uvicorn
