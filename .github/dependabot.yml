@@ -1,0 +1,39 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions-minor-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # Keep the application manifest and uv.lock together.
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      python-minor-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  # The lightweight CI environment is maintained separately from the app lock.
+  - package-ecosystem: pip
+    directory: /
+    exclude-paths:
+      - pyproject.toml
+      - uv.lock
+    schedule:
+      interval: weekly
+    groups:
+      test-dependencies-minor-patch:
+        applies-to: version-updates
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+# Major releases and security updates stay outside the version-update groups.
