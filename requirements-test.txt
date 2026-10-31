@@ -9,5 +9,5 @@ markdownify==1.2.2
 python-docx==1.2.0
 pandas==2.3.3
 cachetools==7.0.5
-openai==2.29.0
+openai==3.40.0
 tenacity==9.1.4
