@@ -1,0 +1,469 @@
+/* 深色主题自定义样式 */
+
+/* 卡片样式 */
+.el-card {
+    background-color: #2a2a2a !important;
+    border-color: #404040 !important;
+}
+
+.el-card__header {
+    border-color: #404040 !important;
+    background-color: #333 !important;
+    color: #e5e5e5 !important;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* 上传组件样式 */
+.upload-card {
+    min-height: 300px;
+}
+
+.upload-demo {
+    margin-bottom: 20px;
+}
+
+.upload-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.el-upload-dragger {
+    background-color: #333 !important;
+    border-color: #555 !important;
+}
+
+.el-upload-dragger:hover {
+    border-color: #667eea !important;
+}
+
+/* 对话组件样式 */
+.chat-card {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+}
+
+.chat-card .el-card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #222;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-message .message-content {
+    background-color: #667eea;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 70%;
+}
+
+.ai-message .message-content {
+    background-color: #333;
+    padding: 12px 16px;
+    border-radius: 12px;
+    max-width: 100%;
+    color: #e5e5e5;
+}
+
+.sources {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+}
+
+.sources-header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.source-content {
+    font-size: 13px;
+    color: #aaa;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.input-area {
+    padding: 20px;
+    background-color: #333;
+    border-top: 1px solid #404040;
+}
+
+.input-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #888;
+}
+
+.empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #666;
+}
+
+/* 搜索组件样式 */
+.search-card {
+    min-height: 400px;
+}
+
+.search-input {
+    margin-bottom: 20px;
+}
+
+.search-settings {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-settings .label {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.search-results {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.results-header {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.result-item {
+    padding: 15px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.result-index {
+    font-weight: 600;
+}
+
+.result-score {
+    color: #4caf50;
+}
+
+.result-content {
+    color: #ccc;
+    line-height: 1.6;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.result-metadata {
+    margin-top: 10px;
+}
+
+/* 集合管理组件样式 */
+.collection-manager-card {
+    min-height: 300px;
+}
+
+.collection-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.collection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #333;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.collection-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.create-collection {
+    margin-top: 20px;
+}
+
+/* Header controls 样式 */
+.header-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Element Plus 深色主题覆盖 */
+.el-input__wrapper {
+    background-color: #3a3a3a !important;
+}
+
+.el-input__inner {
+    background-color: #3a3a3a !important;
+    color: #e5e5e5 !important;
+    border-color: #555 !important;
+}
+
+.el-textarea__inner {
+    background-color: #3a3a3a !important;
+    color: #e5e5e5 !important;
+    border-color: #555 !important;
+}
+
+.el-select .el-input__inner {
+    color: #e5e5e5 !important;
+}
+
+.el-collapse {
+    --el-collapse-bg-color: #333;
+    --el-collapse-text-color: #e5e5e5;
+    --el-collapse-header-bg-color: #3a3a3a;
+}
+
+.el-collapse-item__header {
+    background-color: #3a3a3a !important;
+    color: #e5e5e5 !important;
+    border-color: #555 !important;
+}
+
+.el-collapse-item__content {
+    color: #ccc !important;
+}
+
+.el-tabs--border-card {
+    background-color: #2a2a2a !important;
+    border-color: #404040 !important;
+}
+
+.el-tabs--border-card>.el-tabs__header {
+    background-color: #333 !important;
+}
+
+.el-tabs__item {
+    color: #aaa !important;
+}
+
+.el-tabs__item.is-active {
+    color: #667eea !important;
+}
+
+/* Markdown 样式 */
+.message-content h1,
+.message-content h2,
+.message-content h3,
+.message-content h4 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.message-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #e5e5e5;
+}
+
+.message-content code {
+    background-color: #444;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+.message-content pre {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 10px 0;
+}
+
+.message-content pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.message-content ul,
+.message-content ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.message-content li {
+    margin-bottom: 5px;
+    color: #e5e5e5;
+}
+
+.message-content a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.message-content a:hover {
+    text-decoration: underline;
+}
+
+.message-content strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.message-content em {
+    color: #ccc;
+}
+
+.message-content blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 15px;
+    margin: 10px 0;
+    color: #aaa;
+}
+
+/* 通用 Markdown 格式化（参考来源、搜索结果等） */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    color: #e5e5e5;
+}
+
+.markdown-body p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.markdown-body p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown-body code {
+    background-color: #444;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-body pre {
+    background-color: #1a1a1a;
+    padding: 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 8px 0;
+    font-size: 13px;
+}
+
+.markdown-body pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+.markdown-body li {
+    margin-bottom: 4px;
+    color: #ccc;
+}
+
+.markdown-body a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    text-decoration: underline;
+}
+
+.markdown-body strong {
+    color: #e5e5e5;
+    font-weight: 600;
+}
+
+.markdown-body blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 12px;
+    margin: 8px 0;
+    color: #aaa;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* 状态标识样式 */
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.status-badge .el-icon {
+    font-size: 16px;
+}
